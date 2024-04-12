@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            overflow-x: auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+        }
+        th {
+            background-color: #4CAF50;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        td {
+            color: #666;
+        }
+        .price {
+            padding: 0;
+            position: relative;
+        }
+        .bar {
+			width: calc(100% - 30px);
+            background-color: green;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 5px;
+        }
+        .gray-bar {
+            background-color: #ddd;
+            height: 7px; /* Adjust the height as needed */
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 50px; /* Adjust to leave space for percentage text */
+            border-radius: 5px;
+        }
+        .bar-text {
+            color: green;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 5px; /* Adjust for positioning */
+            font-size: 15px; /* Adjust the font size as needed */
+        }
+        @media only screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            th, td {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Currencies Targets</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Item 1</td>
+                    <td class="price">
+                        <div class="gray-bar" style="width: 90%;">
+                            <div class="bar" style="width: 50%;"></div>
+                        </div>
+                        <div class="bar-text">TP1</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Item 2</td>
+                    <td class="price">
+                        <div class="gray-bar" style="width: 90%;">
+                            <div class="bar" style="width: 25%;"></div>
+                        </div>
+                        <div class="bar-text">TP2</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Item 3</td>
+                    <td class="price">
+                        <div class="gray-bar" style="width: 90%;">
+                            <div class="bar" style="width: 70%;"></div>
+                        </div>
+                        <div class="bar-text">TP3</div>
+                    </td>
+                </tr>
+                <!-- Add more rows for additional items -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
